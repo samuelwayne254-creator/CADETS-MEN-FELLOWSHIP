@@ -1,4 +1,4 @@
-# MEN-S-FELLOWSHIP-.KE.IO
+# MEN-S-FELLOWSHIP-.KE.IO 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,124 +6,117 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cadets Men Fellowship</title>
 
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    line-height: 1.6;
+    background: #0f172a;
+    color: #fff;
 }
 
 /* NAVBAR */
 header {
-    background: rgba(0,0,0,0.85);
-    color: #fff;
-    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
+    padding: 15px 8%;
+    position: fixed;
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
 }
 
 nav a {
-    color: #fff;
     margin-left: 20px;
     text-decoration: none;
+    color: #fff;
+    font-size: 14px;
 }
 
 /* HERO */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url('https://images.unsplash.com/photo-1529070538774-1843cb3265df');
-    background-size: cover;
-    background-position: center;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
 .hero h2 {
-    font-size: 48px;
-    animation: fadeInDown 1.5s ease;
+    font-size: 40px;
 }
 
 .hero p {
-    margin: 20px 0;
-    animation: fadeInUp 1.5s ease;
+    margin: 15px 0;
+    opacity: 0.8;
 }
 
 .btn {
-    background: #f4a261;
-    color: white;
-    padding: 12px 25px;
+    background: #f97316;
     border: none;
-    border-radius: 5px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: white;
     cursor: pointer;
 }
 
-.btn:hover {
-    transform: scale(1.1);
-}
-
-/* FEATURES */
+/* CARDS */
 .features {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
 .feature-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+    margin-top: 30px;
 }
 
 .card {
-    background: #f4f4f4;
-    margin: 15px;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 0.4s;
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
 }
 
-.card.show {
-    opacity: 1;
-    transform: translateY(0);
+.card:hover {
+    transform: translateY(-10px);
 }
 
-/* SIGNUP */
+/* FORM */
 .signup {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
-    background: #f9f9f9;
 }
 
-.signup form {
+form {
     max-width: 400px;
     margin: auto;
     display: flex;
     flex-direction: column;
 }
 
-.signup input {
-    padding: 12px;
+input {
     margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
 }
 
 #successMsg {
-    color: green;
     display: none;
+    color: #22c55e;
 }
 
 /* WHATSAPP */
@@ -132,8 +125,6 @@ nav a {
     bottom: 20px;
     right: 20px;
     background: #25D366;
-    color: white;
-    font-size: 24px;
     padding: 15px;
     border-radius: 50%;
     text-decoration: none;
@@ -141,32 +132,14 @@ nav a {
 
 /* FOOTER */
 footer {
-    background: #111;
-    color: white;
     text-align: center;
     padding: 20px;
+    background: #020617;
 }
 
-/* ANIMATIONS */
-@keyframes fadeInDown {
-    from {opacity: 0; transform: translateY(-50px);}
-    to {opacity: 1;}
-}
-
-@keyframes fadeInUp {
-    from {opacity: 0; transform: translateY(50px);}
-    to {opacity: 1;}
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-
-    .hero h2 {
-        font-size: 30px;
-    }
+/* MOBILE */
+@media(max-width:768px){
+    .hero h2 {font-size: 26px;}
 }
 </style>
 </head>
@@ -174,7 +147,7 @@ footer {
 <body>
 
 <header>
-    <h1>Cadets Men Fellowship</h1>
+    <h3>Cadets</h3>
     <nav>
         <a href="#">Home</a>
         <a href="#features">Mission</a>
@@ -193,33 +166,31 @@ footer {
 <section class="features" id="features">
     <h3>Our Mission</h3>
     <div class="feature-box">
-        <div class="card"><h4>Brotherhood</h4></div>
-        <div class="card"><h4>Discipline</h4></div>
-        <div class="card"><h4>Faith</h4></div>
+        <div class="card">Brotherhood</div>
+        <div class="card">Discipline</div>
+        <div class="card">Faith</div>
     </div>
 </section>
 
-<!-- SIGNUP -->
 <section class="signup" id="signup">
-    <h3>Join Cadets Men Fellowship</h3>
+    <h3>Join Us</h3>
 
     <form id="signupForm">
         <input type="text" id="name" placeholder="Full Name" required>
         <input type="email" id="email" placeholder="Email" required>
         <input type="tel" id="phone" placeholder="Phone" required>
-        <button type="submit" class="btn">Sign Up</button>
+        <button class="btn">Sign Up</button>
     </form>
 
     <p id="successMsg">✅ Successfully joined!</p>
 </section>
 
-<!-- LOGIN -->
 <section class="signup">
     <h3>Member Login</h3>
 
     <form id="loginForm">
-        <input type="email" id="loginEmail" placeholder="Email" required>
-        <input type="password" id="loginPassword" placeholder="Password" required>
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Password">
         <button class="btn">Login</button>
     </form>
 
@@ -230,27 +201,16 @@ footer {
     <p>© 2026 Cadets Men Fellowship</p>
 </footer>
 
-<!-- WhatsApp Button -->
-<a href="https://wa.me/254782141192" class="whatsapp-btn" target="_blank">💬</a>
+<a href="https://wa.me/254782141192" class="whatsapp-btn">💬</a>
 
 <script>
-// SCROLL ANIMATION
-const cards = document.querySelectorAll('.card');
-window.addEventListener('scroll', () => {
-    cards.forEach(card => {
-        if (card.getBoundingClientRect().top < window.innerHeight - 50) {
-            card.classList.add('show');
-        }
-    });
-});
-
 // SIGNUP → GOOGLE SHEETS
 document.getElementById("signupForm").addEventListener("submit", async function(e) {
     e.preventDefault();
 
-    let name = name.value;
-    let email = email.value;
-    let phone = phone.value;
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
 
     try {
         await fetch("YOUR_GOOGLE_SCRIPT_URL_HERE", {
@@ -266,20 +226,20 @@ document.getElementById("signupForm").addEventListener("submit", async function(
     }
 });
 
-// LOGIN (DEMO)
+// LOGIN DEMO
 document.getElementById("loginForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    let email = loginEmail.value;
-    let password = loginPassword.value;
+    let email = document.getElementById("loginEmail").value;
+    let password = document.getElementById("loginPassword").value;
 
     let msg = document.getElementById("loginMsg");
 
     if (email === "admin@cadets.com" && password === "1234") {
-        msg.innerText = "✅ Login successful";
-        msg.style.color = "green";
+        msg.innerText = "Login successful";
+        msg.style.color = "lightgreen";
     } else {
-        msg.innerText = "❌ Invalid details";
+        msg.innerText = "Invalid login";
         msg.style.color = "red";
     }
 });
